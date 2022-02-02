@@ -10,7 +10,7 @@ const refs = {
     dataMinutes: document.querySelector('[data-minutes]'),
     dataseconds: document.querySelector('[data-seconds]'),
 }
-refs.startBtn.addEventListener('click', () => { })
+
 refs.startBtn.disabled = true;
 function convertMs(ms) {
   // Number of milliseconds per unit of time
@@ -38,10 +38,11 @@ function convertMs(ms) {
 const options = {
   enableTime: true,
   time_24hr: true,
-  defaultDate: new Date(),
+  defaultDate: Date.now(),
   minuteIncrement: 1,
     onClose(selectedDates) {
-      let currentDate = new Date();
+      
+          let currentDate = Date.now();
 
       if (selectedDates[0] <= currentDate) {
         alert('Please choose a date in the future');
@@ -49,7 +50,17 @@ const options = {
       }
       refs.startBtn.disabled = false;
       
-  },
-};
+      refs.startBtn.addEventListener('click', () => {
+        setInterval(() => {
+          let deltaTime = selectedDates[0] - currentDate;
+          console.log(convertMs(deltaTime))
+      }, 1000);
+
+ })      
+},};
+
+
+
+
 
 flatpickr('#datetime-picker', options);
