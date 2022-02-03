@@ -1,16 +1,21 @@
-function createPromise(position, delay) {
-  const shouldResolve = Math.random() > 0.3;
-  if (shouldResolve) {
-    // Fulfill
-  } else {
-    // Reject
-  }
+const formRef = document.querySelector('.form');
+let { amount, delay, step } = formRef.elements;
+
+formRef.addEventListener('submit', onSubmitForm);
+
+function onSubmitForm(e) {
+  e.preventDefault();
+  const amountPromise = Number(amount.value);
+  const firstDelay = Number(delay.value);
+  const stepDelay = Number(step.value);
 }
 
-const refs = {
-  delay: document.querySelector('input[name="delay"]'),
-  step: document.querySelector('input[name="step"]'),
-  amout: document.querySelector('input[name="amount"]'),
-  submit: document.querySelector('button[type="submit"]'),
-};
-refs.submit.addEventListener('submit', createPromise);
+// function createPromise(position, delay) {
+//   preventDefault();
+//   const shouldResolve = Math.random() > 0.3;
+//   if (shouldResolve) {
+//     // Fulfill
+//   } else {
+//     // Reject
+//   }
+// }
