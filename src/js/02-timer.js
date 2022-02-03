@@ -2,6 +2,7 @@
 import flatpickr from 'flatpickr';
 // Дополнительный импорт стилей
 import 'flatpickr/dist/flatpickr.min.css';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 let timerId = null;
 let time = 0;
@@ -43,7 +44,7 @@ const options = {
   minuteIncrement: 1,
   onClose(selectedDates) {
     if (selectedDates[0] <= Date.now()) {
-      alert('Please choose a date in the future');
+      Notify.warning('Please choose a date in the future');
       return;
     }
     time = selectedDates[0];
