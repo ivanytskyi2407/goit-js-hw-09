@@ -12,7 +12,6 @@ function onSubmitForm(e) {
   const stepDelay = Number(step.value);
 
   for (let i = 1; i <= amountPromise; i++) {
-    firstDelay += stepDelay;
     createPromise(i, firstDelay)
       .then(({ position, delay }) => {
         Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
@@ -20,6 +19,7 @@ function onSubmitForm(e) {
       .catch(({ position, delay }) => {
         Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
       });
+    firstDelay += stepDelay;
   }
 }
 

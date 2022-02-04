@@ -16,10 +16,10 @@ function changeBodyColorOn() {
     document.body.style.backgroundColor = getRandomHexColor();
   }, 1000);
   this.setAttribute('disabled', true);
-  refs.endBtn.removeAttribute('disabled', true);
+  refs.endBtn.removeAttribute('disabled');
 }
 function changeBodyColorOff() {
   clearInterval(timerId);
-  refs.startBtn.removeAttribute('disabled', true);
+  refs.startBtn.removeAttribute('disabled');
   this.setAttribute('disabled', true);
 }
