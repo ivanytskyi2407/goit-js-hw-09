@@ -10,13 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+http://ivanytskyi2407.github.io/goit-js-hw-09.git"
+    "url": "git+https://github.com/ivanytskyi2407/goit-js-hw-09.git"
   },
   "keywords": [],
   "author": "Oleh Ivanytskyi",
   "license": "ISC",
   "bugs": {
-    "url": "http://ivanytskyi2407.github.io/goit-js-hw-09/issues"
+    "url": "https://github.com/ivanytskyi2407/goit-js-hw-09/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
