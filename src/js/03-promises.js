@@ -24,9 +24,6 @@ function onSubmitForm(e) {
 }
 
 function createPromise(position, delay) {
-  console.log(position, 'promise position');
-  console.log(delay, 'step delay');
-
   const shouldResolve = Math.random() > 0.3;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
