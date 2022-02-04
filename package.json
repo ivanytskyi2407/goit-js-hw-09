@@ -16,7 +16,7 @@
   "author": "Oleh Ivanytskyi",
   "license": "ISC",
   "bugs": {
-    "url": "http://ivanytskyi2407.github.io/goit-js-hw-09//issues"
+    "url": "http://ivanytskyi2407.github.io/goit-js-hw-09/issues"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
